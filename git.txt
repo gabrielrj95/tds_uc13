@@ -1,0 +1,1 @@
+Pronto agora é só subir seus arquivos pro github. Use o comando git add . para adicionar todos os arquivos do projeto. Crie um commit inicial git commit -m "primeiro commit" e depois dê o push git push origin master.

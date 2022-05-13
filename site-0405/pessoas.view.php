@@ -28,7 +28,7 @@ href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <tbody>
 
-<?php foreach ($item as $dados_clientes){ ?>
+<?php foreach ($dados_clientes as $item){ ?>
 <tr>
     <td><?php echo $item['Nome']; ?></td>
     <td><?php echo $item['Idade']; ?></td>
