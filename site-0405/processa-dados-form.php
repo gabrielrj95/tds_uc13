@@ -19,6 +19,7 @@ DELETE
     echo "Seu nome é: ".$nome."<br>";
     echo "Sua idade é: ".$idade."<br>";
     echo "Seu telefone é: ".$telefone."<br>";
-    
+    print_r($_POST["interesses"]);
+    print_r($_FILES["foto_flamingo"]); //ERRO
 
     ?>
