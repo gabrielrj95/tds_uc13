@@ -1,23 +1,27 @@
 <?php
 
-class Database{
-    private $_user = "root";
-    private $_password = "";
-    private $_server_ip = "localhost";
-    private $database_name = "myeatsdb";
+class Database {
 
+    private $user = "root"; //atributos
+    private $password = "";
+    private $server_ip = "localhost";
+    private $dbname = "myeatsdb";
 
-    public function connect (){
-        $con = new PDO("mysql:host=".$this->_server_ip.";dbname=".$this->database_name, $this->_user, $this->_password);
+    public function connect(){ // metodos
+
+        $con = new PDO("mysql:host=".$this->server_ip.";dbname=".$this->dbname, $this->user, $this->password); //instanciar
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $con;              
+        return $con;
 
     }
 
-    public function desconect (){
+    public function disconnect(){
 
     }
 
 }
+
+//$db = new Database();
+//$db->connect();
 
 ?>
