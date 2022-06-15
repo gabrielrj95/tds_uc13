@@ -1,0 +1,53 @@
+CREATE DATABASE pontodb;
+
+CREATE TABLE registro_ponto(
+matricula_id int(5) DEFAULT NULL AUTO_INCREMENT,
+data_hora DATETIME DEFAULT NULL,
+tipo int(4),
+PRIMARY KEY(matricula_id)
+);
+
+
+
+DROP TABLE registro_ponto;
+
+
+
+
+
+https://github.com/ufrgs/spell/blob/master/ponto.sql
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS `ponto` (
+  `nr_ponto` int(12) NOT NULL AUTO_INCREMENT,
+  `id_pessoa` int(6) NOT NULL,
+  `matricula` int(8) DEFAULT NULL,
+  `nr_vinculo` int(1) DEFAULT NULL,
+  `data_hora_ponto` datetime NOT NULL,
+  `entrada_saida` char(1) NOT NULL,
+  `id_pessoa_registro` int(6) NOT NULL,
+  `data_hora_registro` datetime DEFAULT NULL,
+  `ip_registro` varchar(39) NOT NULL,
+  `ambiente_registro` text,
+  PRIMARY KEY (`nr_ponto`),
+  KEY `id_pessoa` (`id_pessoa`),
+  KEY `matricula` (`matricula`,`nr_vinculo`),
+  KEY `id_pessoa_registro` (`id_pessoa_registro`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=604 ;
+
+--
+-- Extraindo dados da tabela `ponto`
+--
+
+INSERT INTO `ponto` (`nr_ponto`, `id_pessoa`, `matricula`, `nr_vinculo`, `data_hora_ponto`, `entrada_saida`, `id_pessoa_registro`, `data_hora_registro`, `ip_registro`, `ambiente_registro`) VALUES
+(1, 1, 1234567, 1, '2016-08-16 16:55:49', 'E', 1, '2016-08-16 16:56:19', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'),
+(2, 1, 1234567, 1, '2016-08-16 17:26:10', 'S', 1, '2016-08-16 17:26:40', '::1', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'),

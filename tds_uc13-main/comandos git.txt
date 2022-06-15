@@ -1,0 +1,24 @@
+https://github.com/gabrielrj95/tds_uc13.git
+
+
+echo "# tds_uc13" >> README.md
+git init
+git remote add origin https://github.com/gabrielrj95/tds_uc13.git
+git pull -u origin master
+
+
+
+mkdir - "lista pastas"
+cd - "local"
+ls - "lista pastas"
+
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/gabrielrj95/tds_uc13.git
+git branch -M main
+git push -u origin main
+
+
+git config --global user.name "gabrielrj95"
+git config --global user.mail "gabriel.justin@hotmail.com"
